@@ -12,7 +12,7 @@ const Loading = styled.span<ILoading>`
     width: ${props => props.size || 37.5}px;
     height: ${props => props.size || 37.5}px;
     animation: spin ${props => props.speed || 1}s linear infinite;
-    border: ${props => props.weight || 5}px solid ${props => props.theme.backgroundColorSecondary};
+    border: ${props => props.weight || 5}px solid ${props => props.theme.secondary};
     border-top: ${props => props.weight || 5}px solid ${props => props.theme.primary};
     
     @keyframes spin {
