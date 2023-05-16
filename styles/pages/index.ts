@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import ButtonSubmitRaw from '../../components/buttons/ButtonSubmit'
 
 export const Container = styled.main`
     display: flex;
@@ -15,39 +14,45 @@ export const Title = styled.h1`
     color: ${props => props.theme.primary};
 `
 
-export const Form = styled.form`
-    width: 35em;
-    padding: 2em;
+export const Bills = styled.div`
     display: flex;
-    padding-top: 3em;
-    margin-bottom: 7%;
+    margin-top: 3em;
     align-self: center;
-    border-radius: 15px;
+`
+
+export const Bill = styled.div`
+    width: 25em;
+    padding: 1em;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
     flex-direction: column;
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
     background-color: ${props => props.theme.secondary};
+    box-shadow: ${props => props.theme.primary} 0px 5px 15px 1px;
 
-    @media screen and (max-width: 650px) {
-        width: calc(8em + 50%);
+    :hover {
+        transform: scale(1);
+        background-color: ${props => props.theme.backgroundColor};
+        box-shadow: ${props => props.theme.primary} 0px 5px 18px 6px;
     }
 `
 
-export const Field = styled.div`
-    width: 20em;
-    display: flex;
-    margin-bottom: 2em;
-    align-self: center;
-    flex-direction: column;
-
-    @media screen and (max-width: 650px) {
-        width: 15em;
-    }
+export const DateBill = styled.span`
+    font-weight: bold;
+    color: ${props => props.theme.colorSecondary};
 `
 
-export const Label = styled.label`
-    font-size: 1.2em;
+export const TitleBill = styled.span`
+    font-size: 1.8em;
+    margin-top: 0.5em;
+`
+
+export const PriceBill = styled.span`
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
     color: ${props => props.theme.primary};
-`
-
-export const ButtonSubmit = styled(ButtonSubmitRaw)`
-    margin-top: 1em;
 `

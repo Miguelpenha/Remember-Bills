@@ -1,21 +1,13 @@
-import { useEffect } from 'react'
-import { IBill } from '../types'
 import api from '../services/api'
+import { IBill } from '../types'
 import Head from 'next/head'
-import { Container, Title } from '../styles/pages'
+import { Container, Title, Bills, Bill, DateBill, TitleBill, PriceBill } from '../styles/pages'
 import ButtonLink from '../components/buttons/ButtonLink'
 import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 
 function Home() {
-    useEffect(() => {
-        async function get() {
-            const bills: IBill[] = await api.get('/bills')
-
-            console.log(bills)
-        }
-
-        get().then()
-    }, [])
+    const { data: bills } = api.get<IBill[]>('/bills')
+    const year = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', year: 'numeric' })
 
     return <>
         <Head>
@@ -24,6 +16,15 @@ function Home() {
         <Container>
             <Title>Home</Title>
             <ButtonLink href="/register">Cadastrar conta</ButtonLink>
+            <Bills>
+                {bills && bills.map((bill, index) => (
+                    <Bill key={index}>
+                        <DateBill>{bill.payday}/{month}/{year}</DateBill>
+                        <TitleBill>{bill.name}</TitleBill>
+                        <PriceBill>{bill.priceRaw}</PriceBill>
+                    </Bill>
+                ))}
+            </Bills>
         </Container>
     </>
 }

@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from 'react'
 import { setCookie } from 'nookies'
-import api from '../../../../services/api'
+import api from '../../../../services/api/base'
 
 interface IResponse {
     token: string
