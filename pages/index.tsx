@@ -7,6 +7,7 @@ import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 
 function Home() {
     const { data: bills } = api.get<IBill[]>('/bills')
+    const month = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', month: '2-digit' })
     const year = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', year: 'numeric' })
 
     return <>
