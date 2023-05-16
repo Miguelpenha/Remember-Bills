@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
 interface IStyleContainer {
-    loading: string
-    disabled: boolean
+    loading?: string
+    disabled?: boolean
 }
 
 export const styleContainer = css<IStyleContainer>`
@@ -19,8 +19,8 @@ export const styleContainer = css<IStyleContainer>`
     transform: scale(0.95);
     transition-duration: 0.2s;
     transition-timing-function: linear;
-    border: 1px solid ${props => props.theme.backgroundColor};
     background-color: ${props => props.theme.secondary};
+    box-shadow: ${props => props.theme.primary} 0px 3px 12px 1px;
 
     ${props => props.loading == 'true' && css`
         cursor: default;
@@ -29,9 +29,8 @@ export const styleContainer = css<IStyleContainer>`
     ${props => !props.disabled && css`
         :hover {
             transform: scale(1);
-            border: 1px solid ${props => props.theme.primary};
             background-color: ${props => props.theme.backgroundColor};
-            box-shadow: ${props => props.theme.primary} 0px 3px 7px 0px;
+            box-shadow: ${props => props.theme.primary} 0px 5px 14px 6px;
         }
     `}
 
