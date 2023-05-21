@@ -5,6 +5,7 @@ import createdSchema from './schemasPatterns/created'
 const schema = new mongoose.Schema<IBill>({
     name: String,
     price: Number,
+    owner: String,
     payday: String,
     priceRaw: String,
     created: createdSchema

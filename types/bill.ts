@@ -1,6 +1,8 @@
 interface IBill {
+    _id: string
     name: string
     price: number
+    owner: string
     payday: number
     priceRaw: string
     created: {

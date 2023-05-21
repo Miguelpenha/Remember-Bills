@@ -5,7 +5,7 @@ import { useEffect, FormEvent } from 'react'
 import api from '../services/api/base'
 import { toast } from 'react-toastify'
 import Head from 'next/head'
-import { Container, Title, Form, Field, Label, ButtonSubmit } from '../styles/pages/register'
+import { Container, Title, Form, Field, Label, Required, ButtonSubmit } from '../styles/pages/register'
 import Input from '../components/Input'
 import CurrencyInput from '../components/CurrencyInput'
 import InputMask from '../components/InputMask'
@@ -40,7 +40,7 @@ function Create() {
             <Title>Cadastrar conta</Title>
             <Form onSubmit={handleSubmit}>
                 <Field>
-                    <Label htmlFor="name">Nome</Label>
+                    <Label htmlFor="name">Nome <Required>*</Required></Label>
                     <Input
                         required
                         id="name"
@@ -49,7 +49,7 @@ function Create() {
                     />
                 </Field>
                 <Field>
-                    <Label htmlFor="priceRaw">Preço</Label>
+                    <Label htmlFor="priceRaw">Preço <Required>*</Required></Label>
                     <CurrencyInput
                         required
                         id="priceRaw"
@@ -59,7 +59,7 @@ function Create() {
                     />
                 </Field>
                 <Field>
-                    <Label htmlFor="payday">Dia do pagamento</Label>
+                    <Label htmlFor="payday">Dia do pagamento <Required>*</Required></Label>
                     <InputMask name="payday" mask="99" onChange={ev => setValue('payday', Number(ev.target.value))}>
                         <Input
                             required
@@ -67,6 +67,15 @@ function Create() {
                             placeholder="Dia do pagamento da conta"
                         />
                     </InputMask>
+                </Field>
+                <Field>
+                    <Label htmlFor="owner">Dono <Required>*</Required></Label>
+                    <Input
+                        required
+                        id="owner"
+                        {...register('owner')}
+                        placeholder="Dono da conta..."
+                    />
                 </Field>
                 <ButtonSubmit type="submit" title="Cadastrar"/>
             </Form>

@@ -1,26 +1,23 @@
-import { IBill } from '../../../types'
+import type { IBill } from '../../../types'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import connectDB from '../../../services/connectDB'
 import formatMoney from '../../../utils/formatMoney'
 import billsModels from '../../../models/bill'
 
-interface IBody {
-    name: string
-    payday: number
-    priceRaw: string
-}
+type IBody = Omit<IBill, 'created' | 'price' | '_id'>
 
 async function createBill(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         await connectDB()
 
-        const { name, payday, priceRaw } = req.body as IBody
+        const { name, payday, priceRaw, owner } = req.body as IBody
 
-        const bill = {
+        const bill: IBody = {
             name,
+            owner,
             payday,
             priceRaw
-        } as IBill
+        }
 
         if (bill) {
             const { valueRaw } = formatMoney(bill.priceRaw)

@@ -7,7 +7,8 @@ interface IStyleContainer {
 
 export const styleContainer = css<IStyleContainer>`
     margin: 1.5%;
-    width: 18rem;
+    width: 17rem;
+    border: none;
     display: flex;
     padding: 1.2rem;
     cursor: pointer;

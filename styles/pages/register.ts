@@ -48,6 +48,11 @@ export const Label = styled.label`
     color: ${props => props.theme.primary};
 `
 
+export const Required = styled.span`
+    color: red;
+    font-size: 1.2em;
+`
+
 export const ButtonSubmit = styled(ButtonSubmitRaw)`
     margin-top: 1em;
 `
