@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.button`
     width: 30em;
     padding: 1em;
+    border: none;
     display: flex;
     cursor: pointer;
     align-self: center;
@@ -11,6 +12,7 @@ export const Container = styled.div`
     transform: scale(0.95);
     transition-duration: 0.2s;
     transition-timing-function: linear;
+    color: ${props => props.theme.color};
     background-color: ${props => props.theme.secondary};
     box-shadow: ${props => props.theme.primary} 0px 5px 15px 1px;
 

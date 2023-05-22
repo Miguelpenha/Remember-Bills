@@ -2,6 +2,7 @@ import { IBill } from '../../types'
 import { FC } from 'react'
 import { Container, Header, PayDay, Options, Option, IconOption, Title, Footer, Price, Owner } from './style'
 import handleDelete from './handleDelete'
+import handleClick from './handleClick'
 
 interface IProps {
     bill: IBill
@@ -13,7 +14,11 @@ const Bill: FC<IProps> = ({ bill, mutate }) => {
     const year = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', year: 'numeric' })
     
     return (
-        <Container>
+        <Container onClick={async () => {
+            await handleClick(bill._id)
+
+            await mutate()
+        }}>
             <Header>
                 <PayDay>{bill.payday}/{month}/{year}</PayDay>
                 <Options>

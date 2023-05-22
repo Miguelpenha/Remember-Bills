@@ -3,8 +3,8 @@ import { IBill } from '../types'
 import Head from 'next/head'
 import { Container, Title, Bills } from '../styles/pages'
 import ButtonLink from '../components/buttons/ButtonLink'
-import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 import Bill from '../components/Bill'
+import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 
 function Home() {
     const { data: bills, mutate } = api.get<IBill[]>('/bills')
@@ -17,7 +17,7 @@ function Home() {
             <Title>Home</Title>
             <ButtonLink href="/register">Cadastrar conta</ButtonLink>
             <Bills>
-                {bills && bills.map((bill, index) => (
+                {bills && bills.map((bill, index) => !bill.paid && (
                     <Bill mutate={mutate as any} bill={bill} key={index}/>
                 ))}
             </Bills>

@@ -4,7 +4,7 @@ import connectDB from '../../../services/connectDB'
 import formatMoney from '../../../utils/formatMoney'
 import billsModels from '../../../models/bill'
 
-type IBody = Omit<IBill, 'created' | 'price' | '_id'>
+type IBody = Omit<IBill, 'created' | 'price' | '_id' | 'paid'>
 
 async function createBill(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {

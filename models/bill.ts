@@ -8,7 +8,11 @@ const schema = new mongoose.Schema<IBill>({
     owner: String,
     payday: String,
     priceRaw: String,
-    created: createdSchema
+    created: createdSchema,
+    paid: {
+        type: Boolean,
+        default: false
+    }
 })
 
 const billsModels = mongoose.models.bills || mongoose.model<IBill>('bills', schema)
