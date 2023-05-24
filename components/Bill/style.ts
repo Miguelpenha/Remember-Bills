@@ -18,7 +18,7 @@ export const Container = styled.a<IContainer>`
     color: ${props => props.theme.color};
     background-color: ${props => props.theme.secondary};
     filter: brightness(${props => props.paid ? 0.3 : 1});
-    box-shadow: ${props => props.theme.primary} 0px 5px 15px 1px;
+    box-shadow: ${props => props.theme.primary} 0px 2px 8px 1px;
 
     ${props => !props.paid && css`
         cursor: pointer;
@@ -26,12 +26,12 @@ export const Container = styled.a<IContainer>`
         :hover {
             transform: scale(1);
             background-color: ${props => props.theme.backgroundColor};
-            box-shadow: ${props => props.theme.primary} 0px 5px 18px 6px;
+            box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
         }
     `}
 
     @media screen and (max-width: 900px) {
-        width: 85%;
+        width: 88%;
     }
 `
 

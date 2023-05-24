@@ -21,7 +21,7 @@ export const styleContainer = css<IStyleContainer>`
     transition-duration: 0.2s;
     transition-timing-function: linear;
     background-color: ${props => props.theme.secondary};
-    box-shadow: ${props => props.theme.primary} 0px 3px 12px 1px;
+    box-shadow: ${props => props.theme.primary} 0px 2px 8px 1px;
 
     ${props => props.loading == 'true' && css`
         cursor: default;
@@ -31,7 +31,7 @@ export const styleContainer = css<IStyleContainer>`
         :hover {
             transform: scale(1);
             background-color: ${props => props.theme.backgroundColor};
-            box-shadow: ${props => props.theme.primary} 0px 5px 14px 6px;
+            box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
         }
     `}
 

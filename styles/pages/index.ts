@@ -14,6 +14,16 @@ export const Title = styled.h1`
     color: ${props => props.theme.primary};
 `
 
+export const Options = styled.div`
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 900px) {
+        gap: 1.5em;
+        flex-wrap: wrap;
+    }
+`
+
 export const Bills = styled.div`
     gap: 3em;
     width: 100%;
