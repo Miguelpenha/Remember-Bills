@@ -1,11 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.button`
+interface IContainer {
+    paid: boolean
+}
+
+export const Container = styled.a<IContainer>`
     width: 30em;
     padding: 1em;
-    border: none;
     display: flex;
-    cursor: pointer;
+    cursor: no-drop;
     align-self: center;
     border-radius: 10px;
     flex-direction: column;
@@ -14,13 +17,18 @@ export const Container = styled.button`
     transition-timing-function: linear;
     color: ${props => props.theme.color};
     background-color: ${props => props.theme.secondary};
+    filter: brightness(${props => props.paid ? 0.3 : 1});
     box-shadow: ${props => props.theme.primary} 0px 5px 15px 1px;
 
-    :hover {
-        transform: scale(1);
-        background-color: ${props => props.theme.backgroundColor};
-        box-shadow: ${props => props.theme.primary} 0px 5px 18px 6px;
-    }
+    ${props => !props.paid && css`
+        cursor: pointer;
+
+        :hover {
+            transform: scale(1);
+            background-color: ${props => props.theme.backgroundColor};
+            box-shadow: ${props => props.theme.primary} 0px 5px 18px 6px;
+        }
+    `}
 
     @media screen and (max-width: 900px) {
         width: 85%;
