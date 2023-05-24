@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const api = axios.create({
+const base = axios.create({
     baseURL: '/api'
 })
 
-export default api
+export default base
