@@ -1,4 +1,5 @@
 import { IBill } from '../../types'
+import { KeyedMutator } from 'swr'
 import { FC } from 'react'
 import { Container, Header, PayDay, Options, Option, IconOption, Title, Footer, Price, Owner } from './style'
 import handleClick from './handleClick'
@@ -6,7 +7,7 @@ import handleDelete from './handleDelete'
 
 interface IProps {
     bill: IBill
-    mutate: () => Promise<void>
+    mutate: KeyedMutator<IBill[]>
 }
 
 const Bill: FC<IProps> = ({ bill, mutate }) => {
