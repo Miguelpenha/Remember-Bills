@@ -7,6 +7,7 @@ import Button from '../components/buttons/Button'
 import handleReset from '../components/handleReset'
 import Bill from '../components/Bill'
 import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
+import Loading from '../components/Loading'
 
 function Home() {
     const { data: bills, mutate } = api.get<IBill[]>('/bills')
@@ -42,9 +43,9 @@ function Home() {
                 </Button>
             </Options>
             <Bills>
-                {bills && bills.map((bill, index) => (
+                {bills ? bills.map((bill, index) => (
                     <Bill mutate={mutate as any} bill={bill} key={index}/>
-                ))}
+                )) : <Loading size={140} weight={15}/>}
             </Bills>
         </Container>
     </>
