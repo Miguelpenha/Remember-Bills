@@ -13,7 +13,9 @@ function formatMoney(value: string) {
         .trimStart()
     )
 
-    const valueFormatted = dinero({ amount: valueRaw, currency: 'BRL' }).toFormat().replace('R$', 'R$ ')
+    dinero.globalLocale = 'pt-BR'
+
+    const valueFormatted = dinero({ amount: valueRaw, currency: 'BRL' }).toFormat()
 
     return {
         valueRaw,

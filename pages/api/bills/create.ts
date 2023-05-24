@@ -20,11 +20,12 @@ async function createBill(req: NextApiRequest, res: NextApiResponse) {
         }
 
         if (bill) {
-            const { valueRaw } = formatMoney(bill.priceRaw)
+            const { valueRaw, valueFormatted } = formatMoney(bill.priceRaw)
 
             await billsModels.create({
                 ...bill,
-                price: valueRaw
+                price: valueRaw,
+                priceRaw: valueFormatted
             } as IBill)
 
             res.json({ created: true })
