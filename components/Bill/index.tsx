@@ -25,7 +25,9 @@ const Bill: FC<IProps> = ({ bill, mutate }) => {
                     <PayDay>{bill.payday}/{month}/{year}</PayDay>
                     {!bill.paid && (
                         <Options>
-                            <Option onClick={async () => {
+                            <Option onClick={async ev => {
+                                ev.stopPropagation()
+
                                 await handleDelete(bill._id)
 
                                 await mutate()
