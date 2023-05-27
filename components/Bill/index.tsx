@@ -1,6 +1,7 @@
 import { IBill } from '../../types'
 import { KeyedMutator } from 'swr'
 import { FC } from 'react'
+import formatDay from '../../utils/formatDay'
 import { Container, Header, PayDay, Options, Option, OptionLink, IconOption, Title, Footer, Price, Owner } from './style'
 import handleClick from './handleClick'
 import handleDelete from './handleDelete'
@@ -13,6 +14,7 @@ interface IProps {
 const Bill: FC<IProps> = ({ bill, mutate }) => {
     const month = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', month: '2-digit' })
     const year = new Date().toLocaleDateString('pt-br', { timeZone: 'UTC', year: 'numeric' })
+    const day = formatDay(bill.payday)
     
     return (
         <Container paid={bill.paid} onClick={async () => {
@@ -23,7 +25,7 @@ const Bill: FC<IProps> = ({ bill, mutate }) => {
             }
         }}>
             <Header>
-                    <PayDay>{bill.payday}/{month}/{year}</PayDay>
+                    <PayDay>{day}/{month}/{year}</PayDay>
                     {!bill.paid && (
                         <Options>
                             <OptionLink href={`/edit/${bill._id}`} onClick={ev => ev.stopPropagation()}>
