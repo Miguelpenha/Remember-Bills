@@ -76,7 +76,7 @@ function Edit() {
                     </Field>
                     <Field>
                         <Label htmlFor="payday">Dia do pagamento <Required>*</Required></Label>
-                        <InputMask defaultValue={data.payday} name="payday" mask="99" onChange={ev => setValue('payday', Number(ev.target.value))}>
+                        <InputMask defaultValue={data.payday} name="payday" mask="99" onChange={ev => setValue('payday', ev.target.value)}>
                             <Input
                                 required
                                 id="payday"

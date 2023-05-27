@@ -4,7 +4,7 @@ interface IBill {
     paid: boolean
     price: number
     owner: string
-    payday: number
+    payday: string
     priceRaw: string
     created: {
         date: string
