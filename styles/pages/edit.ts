@@ -20,7 +20,7 @@ export const Title = styled.h1`
     align-self: center;
     text-align: center;
     margin-bottom: 8vh;
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.color};
 `
 
 export const Form = styled.form`
@@ -53,7 +53,7 @@ export const Field = styled.div`
 
 export const Label = styled.label`
     font-size: 1.2em;
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.colorSecondary};
 `
 
 export const Required = styled.span`

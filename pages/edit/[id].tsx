@@ -20,7 +20,9 @@ interface IQuery {
 function Edit() {
     const { id } = useRouter().query as unknown as IQuery
     const { data } = api.get<IBill>(`/bills/get/${id}`)
-    const { watch, register, setValue } = useForm<IBill>()
+    const { watch, register, setValue } = useForm<IBill>({
+        values: data
+    })
     const bill = watch()
     const router = useRouter()
 
@@ -30,8 +32,11 @@ function Edit() {
 
     async function handleSubmit(ev: FormEvent<HTMLFormElement>) {
         ev.preventDefault()
-
-        await base.post('/bills/edit', bill)
+        
+        await base.post('/bills/edit', {
+            ...bill,
+            id: data?._id
+        })
 
         toast('Conta editada com sucesso!', {
             type: 'success'
@@ -54,6 +59,7 @@ function Edit() {
                             required
                             id="name"
                             {...register('name')}
+                            defaultValue={data.name}
                             placeholder="Nome da conta..."
                         />
                     </Field>
@@ -65,11 +71,12 @@ function Edit() {
                             {...register('priceRaw')}
                             placeholder="Preço da conta..."
                             intlConfig={{ locale: 'pt-BR', currency: 'BRL' }}
+                            defaultValue={String(data.price).slice(0, -2)+','+String(data.price).slice(-2)}
                         />
                     </Field>
                     <Field>
                         <Label htmlFor="payday">Dia do pagamento <Required>*</Required></Label>
-                        <InputMask name="payday" mask="99" onChange={ev => setValue('payday', Number(ev.target.value))}>
+                        <InputMask defaultValue={data.payday} name="payday" mask="99" onChange={ev => setValue('payday', Number(ev.target.value))}>
                             <Input
                                 required
                                 id="payday"
@@ -83,10 +90,11 @@ function Edit() {
                             required
                             id="owner"
                             {...register('owner')}
+                            defaultValue={data.owner}
                             placeholder="Dono da conta..."
                         />
                     </Field>
-                    <ButtonSubmit type="submit" title="Cadastrar"/>
+                    <ButtonSubmit type="submit" title="Editar"/>
                 </Form>
             </Container>
         </>
