@@ -39,14 +39,9 @@ export const styleContainer = css<IStyleContainer>`
     }
 
     svg {
-        width: 2.3em;
-        height: 2.3em;
+        width: 2.1em;
+        height: 2.1em;
         fill: ${props => props.theme.primary};
-
-        @media screen and (max-width: 900px) {
-            width: 2em;
-            height: 2em;
-        }
     }
 `
 
