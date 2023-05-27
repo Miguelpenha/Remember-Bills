@@ -5,7 +5,8 @@ import { styleText, styleContainer } from './Button/style'
 const ButtonLink = styled(Link)`
     ${styleText}
     ${styleContainer}
-
+    
+    text-decoration: none;
     justify-content: center;
 `
 

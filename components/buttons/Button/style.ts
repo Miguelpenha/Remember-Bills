@@ -10,13 +10,12 @@ export const styleContainer = css<IStyleContainer>`
     width: 17rem;
     border: none;
     display: flex;
-    padding: 1.2rem;
+    padding: 1rem;
     cursor: pointer;
     text-align: center;
     align-self: center;
     border-radius: 10px;
     align-items: center;
-    text-decoration: none;
     transform: scale(0.95);
     transition-duration: 0.2s;
     transition-timing-function: linear;
@@ -36,6 +35,8 @@ export const styleContainer = css<IStyleContainer>`
     `}
 
     svg {
+        width: 1.9em;
+        height: 1.9em;
         margin-left: 1%;
         fill: ${props => props.theme.primary};
     }
@@ -50,6 +51,10 @@ export const styleText = css`
     font-size: 1.4rem;
     font-weight: bold;
     color: ${props => props.theme.primary};
+
+    @media screen and (max-width: 900px) {
+        font-size: 1.2em;
+    }
 `
 
 export const Text = styled.span`

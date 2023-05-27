@@ -5,15 +5,6 @@ export const Container = styled.main`
     flex-direction: column;
 `
 
-export const Title = styled.h1`
-    margin-top: 8vh;
-    font-size: 2.2em;
-    align-self: center;
-    text-align: center;
-    margin-bottom: 8vh;
-    color: ${props => props.theme.color};
-`
-
 export const Options = styled.div`
     display: flex;
     justify-content: center;

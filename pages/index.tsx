@@ -1,6 +1,7 @@
 import useBills from '../components/useBills'
 import Head from 'next/head'
-import { Container, Title, Options } from '../styles/pages'
+import { Container, Options } from '../styles/pages'
+import Title from '../components/Title'
 import ButtonLink from '../components/buttons/ButtonLink'
 import ButtonReset from '../components/ButtonReset'
 import Bills from '../components/Bills'
