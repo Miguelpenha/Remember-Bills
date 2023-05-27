@@ -32,6 +32,7 @@ export default createGlobalStyle`
     .Toastify__toast {
         color: ${props => props.theme.color};
         background-color: ${props => props.theme.secondary};
+        box-shadow: ${props => props.theme.primary} 0px 2.5px 12px 4px;
     }
 
     .Toastify__progress-bar {

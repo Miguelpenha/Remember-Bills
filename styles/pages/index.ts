@@ -11,7 +11,7 @@ export const Title = styled.h1`
     align-self: center;
     text-align: center;
     margin-bottom: 8vh;
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.color};
 `
 
 export const Options = styled.div`
