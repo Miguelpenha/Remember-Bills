@@ -1,5 +1,5 @@
-function formatDay(day: number) {
-    if (String(day).length === 1) {
+function formatDay(day: string) {
+    if (day.length === 1) {
         return `0${day}`
     } else {
         return day
