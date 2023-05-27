@@ -6,8 +6,11 @@ const ButtonLink = styled(Link)`
     ${styleText}
     ${styleContainer}
     
-    text-decoration: none;
-    justify-content: center;
+    && {
+        font-size: 1.4rem;
+        text-decoration: none;
+        justify-content: center;
+    }
 `
 
 export default ButtonLink

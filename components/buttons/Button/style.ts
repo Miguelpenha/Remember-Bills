@@ -35,7 +35,8 @@ export const styleContainer = css<IStyleContainer>`
     `}
 
     @media screen and (max-width: 900px) {
-       width: 65%;
+        min-width: 10em;
+        max-width: 65%;
     }
 
     svg {
@@ -56,7 +57,7 @@ export const styleText = css`
     color: ${props => props.theme.primary};
 
     @media screen and (max-width: 900px) {
-        font-size: 1.2em;
+        font-size: 1.7em;
     }
 `
 
