@@ -6,7 +6,7 @@ interface IContainer {
 }
 
 export const Container = styled.a<IContainer>`
-    width: 30em;
+    width: 25em;
     padding: 1em;
     display: flex;
     cursor: no-drop;
@@ -30,10 +30,6 @@ export const Container = styled.a<IContainer>`
             box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
         }
     `}
-
-    @media screen and (max-width: 900px) {
-        width: 88%;
-    }
 `
 
 export const Header = styled.div`
