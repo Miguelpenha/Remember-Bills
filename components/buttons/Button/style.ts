@@ -35,8 +35,8 @@ export const styleContainer = css<IStyleContainer>`
     `}
 
     @media screen and (max-width: 900px) {
+        max-width: 80%;
         min-width: 10em;
-        max-width: 65%;
     }
 
     svg {
