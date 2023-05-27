@@ -34,11 +34,19 @@ export const styleContainer = css<IStyleContainer>`
         }
     `}
 
+    @media screen and (max-width: 900px) {
+       width: 65%;
+    }
+
     svg {
-        width: 1.9em;
-        height: 1.9em;
-        margin-left: 1%;
+        width: 2.3em;
+        height: 2.3em;
         fill: ${props => props.theme.primary};
+
+        @media screen and (max-width: 900px) {
+            width: 2em;
+            height: 2em;
+        }
     }
 `
 
