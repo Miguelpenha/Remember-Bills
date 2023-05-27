@@ -83,7 +83,7 @@ export const Title = styled.span`
     margin-top: 0.5em;
 
     @media screen and (max-width: 900px) {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 `
 
