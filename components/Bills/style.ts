@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LoadingRaw from '../Loading'
 
 export const Container = styled.div`
     gap: 3em;
@@ -13,4 +14,8 @@ export const Container = styled.div`
     @media screen and (max-width: 900px) {
         justify-content: center;
     }
+`
+
+export const Loading = styled(LoadingRaw)`
+    margin-top: 2em;
 `

@@ -1,10 +1,9 @@
 import { IBill } from '../../types'
 import { KeyedMutator } from 'swr'
 import { FC, useState } from 'react'
-import { Container } from './style'
+import { Container, Loading } from './style'
 import includesInBill from './includesInBill'
 import Bill from '../Bill'
-import Loading from '../Loading'
 import ModalDelete from '../Modals/ModalDelete'
 
 interface IProps {
