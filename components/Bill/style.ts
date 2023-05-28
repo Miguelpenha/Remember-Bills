@@ -9,7 +9,7 @@ export const Container = styled.a<IContainer>`
     width: 25em;
     padding: 1em;
     display: flex;
-    cursor: no-drop;
+    cursor: pointer;
     align-self: center;
     border-radius: 10px;
     flex-direction: column;
@@ -18,12 +18,10 @@ export const Container = styled.a<IContainer>`
     transition-timing-function: linear;
     color: ${props => props.theme.color};
     background-color: ${props => props.theme.secondary};
-    filter: brightness(${props => props.paid ? 0.3 : 1});
+    filter: brightness(${props => props.paid ? 0.4 : 1});
     box-shadow: ${props => props.theme.primary} 0px 2px 8px 1px;
 
     ${props => !props.paid && css`
-        cursor: pointer;
-
         :hover {
             transform: scale(1);
             background-color: ${props => props.theme.backgroundColor};
@@ -95,6 +93,11 @@ export const Footer = styled.div`
     width: 100%;
     display: flex;
     margin-top: 1em;
+`
+
+export const ContainerPrice = styled.div`
+    display: flex;
+    align-items: center;
 `
 
 export const Price = styled.span`
