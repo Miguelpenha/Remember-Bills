@@ -24,7 +24,7 @@ const ModalDelete: FC<IProps> = ({ setOpen, open, billID }) => {
     }
 
     return (
-        <Modal width="32vw" height="19em" open={open} setOpen={setOpen}>
+        <Modal width="32vw" height="21em" open={open} setOpen={setOpen}>
             <Container>
                 <Title>Deletar essa conta?</Title>
                 <Buttons>

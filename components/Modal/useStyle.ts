@@ -13,7 +13,7 @@ function useStyle(width?: string, height?: string): ModalRaw.Styles {
             border: 'none',
             margin: 'auto',
             display: 'flex',
-            minWidth: '15em',
+            minWidth: '13em',
             width: width || '50vw',
             flexDirection: 'column',
             height: height || '45vh',
