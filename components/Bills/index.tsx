@@ -1,10 +1,11 @@
 import { IBill } from '../../types'
 import { KeyedMutator } from 'swr'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Container } from './style'
 import includesInBill from './includesInBill'
 import Bill from '../Bill'
 import Loading from '../Loading'
+import ModalDelete from '../Modals/ModalDelete'
 
 interface IProps {
     search: string
@@ -13,16 +14,26 @@ interface IProps {
 }
 
 const Bills: FC<IProps> = ({ bills, search, mutate }) => {
+    const [modalDelete, setModalDelete] = useState(false)
+    const [billDelete, setBillDelete] = useState<string>()
+
+    function onDelete(bill: IBill) {
+        setModalDelete(true)
+
+        setBillDelete(bill._id)
+    }
+
     if (bills) {
         return (
             <Container>
                 {bills.map((bill, index) => {
                     if (includesInBill(bill, search)) {
                         return (
-                            <Bill mutate={mutate} bill={bill} key={index}/>
+                            <Bill onDelete={onDelete} mutate={mutate} bill={bill} key={index}/>
                         )
                     }
                 })}
+                <ModalDelete mutate={mutate} billID={billDelete} open={modalDelete} setOpen={setModalDelete}/>
             </Container>
         )
     } else {

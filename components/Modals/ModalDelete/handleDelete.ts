@@ -1,4 +1,4 @@
-import api from '../../services/api/base'
+import api from '../../../services/api/base'
 import { toast } from 'react-toastify'
 
 async function handleDelete(id: string) {

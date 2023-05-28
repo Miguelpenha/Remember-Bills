@@ -73,9 +73,13 @@ export const OptionLink = styled(Link)`
     ${styleOption}
 `
 
-export const IconOption = styled.svg`
+interface IIconOption {
+    delete?: boolean
+}
+
+export const IconOption = styled.svg<IIconOption>`
     width: 1.8em;
-    fill: ${props => props.theme.primary};
+    fill: ${props => props.delete ? 'red' : props.theme.primary};
 `
 
 export const Title = styled.span`
