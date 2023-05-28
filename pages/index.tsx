@@ -2,6 +2,7 @@ import { useState } from 'react'
 import useBills from '../components/useBills'
 import Head from 'next/head'
 import { Container, Options, Filters, InputSearch } from '../styles/pages'
+import ButtonSettings from '../components/ButtonSettings'
 import Title from '../components/Title'
 import ButtonLink from '../components/buttons/ButtonLink'
 import ButtonReset from '../components/ButtonReset'
@@ -17,6 +18,7 @@ function Home() {
             <title>Home</title>
         </Head>
         <Container>
+            <ButtonSettings/>
             <Title>Home</Title>
             <Options>
                 <ButtonLink href="/register">Cadastrar conta</ButtonLink>
