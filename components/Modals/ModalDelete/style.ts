@@ -42,4 +42,8 @@ export const Button = styled(ButtonRaw)`
 
 export const ButtonDelete = styled(ButtonDeleteRaw)`
     ${styleButton}
+
+    @media screen and (max-width: 900px) {
+        order: -1;
+    }
 `
