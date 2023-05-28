@@ -23,7 +23,7 @@ function Home() {
                 <ButtonReset mutate={mutate}/>
             </Options>
             <Filters>
-                <InputSearch onChange={ev => setSearch(ev.target.value)} id="search" name="search" placeholder="Buscar"/>
+                <InputSearch type="search" onChange={ev => setSearch(ev.target.value)} id="search" name="search" placeholder="Buscar"/>
             </Filters>
             <Bills search={search} bills={bills} mutate={mutate}/>
         </Container>
