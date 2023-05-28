@@ -1,4 +1,4 @@
-import { IBill } from '../../../types'
+import { IBill } from '../../../../types'
 import { ISituation } from './type'
 
 function getSituation(bill: IBill): ISituation {

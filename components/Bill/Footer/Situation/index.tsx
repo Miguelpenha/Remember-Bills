@@ -1,4 +1,4 @@
-import { IBill } from '../../../types'
+import { IBill } from '../../../../types'
 import { FC } from 'react'
 import getSituation from './getSituation'
 import { Icon } from './style'
