@@ -55,6 +55,10 @@ function useStyles(): StylesConfig {
             ...baseStyles,
             fontWeight: '500',
             color: theme.primary
+        }),
+        input: (baseStyles) => ({
+            ...baseStyles,
+            color: theme.color
         })
     }
 }
