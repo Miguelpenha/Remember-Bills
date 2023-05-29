@@ -1,4 +1,4 @@
-import ISituation from './type'
+import ISituation from '../../../../types/situation'
 import styled from 'styled-components'
 import getColorSituation from './getColorSituation'
 
