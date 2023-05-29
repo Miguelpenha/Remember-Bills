@@ -5,6 +5,16 @@ function useStyles(): StylesConfig {
     const theme = useTheme()
 
     return {
+        container: (baseStyles) => ({
+            width: '20em',
+            ...baseStyles,
+            '@media screen and (max-width: 900px)': {
+                width: '25em'
+            },
+            '@media screen and (max-width: 450px)': {
+                width: '95%'
+            }
+        }),
         placeholder: (baseStyles) => ({
             ...baseStyles,
             color: theme.colorSecondary
@@ -23,17 +33,16 @@ function useStyles(): StylesConfig {
             backgroundColor: state.isFocused ? theme.primary : theme.secondary
         }),
         control: (baseStyles, state) => ({
+            width: '100%',
             ...baseStyles,
-            width: '15em',
+            margin: 'auto',
             border: 'none',
+            cursor: 'pointer',
             transitionDuration: '0.2s',
             backgroundColor: theme.secondary,
             transitionTimingFunction: 'linear',
             borderRadius: state.isFocused ? '8px' : '15px',
-            boxShadow: state.isFocused ? `${theme.primary} 0px 2px 8px 4px` : `${theme.primary} 0px 1px 8px 1px`,
-            '@media screen and (max-width: 900px)': {
-                width: '25em'
-            }
+            boxShadow: state.isFocused ? `${theme.primary} 0px 2px 8px 4px` : `${theme.primary} 0px 1px 8px 1px`
         }),
         menuList: (baseStyles) => ({
             ...baseStyles,

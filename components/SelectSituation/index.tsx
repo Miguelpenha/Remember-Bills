@@ -15,7 +15,7 @@ const options = [
     { value: 'waiting', label: 'Em espera' }
 ]
 
-const Select: FC<IProps> = ({ setSituation }) => {
+const SelectSituation: FC<IProps> = ({ setSituation }) => {
     const styles = useStyles()
     
     return (
@@ -23,4 +23,4 @@ const Select: FC<IProps> = ({ setSituation }) => {
     )
 }
 
-export default Select
+export default SelectSituation

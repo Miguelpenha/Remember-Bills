@@ -74,4 +74,8 @@ export const InputSearch = styled.input`
     @media screen and (max-width: 900px) {
         width: 25em;
     }
+
+    @media screen and (max-width: 450px) {
+        width: 95%;
+    }
 `

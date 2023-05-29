@@ -7,7 +7,7 @@ import ButtonSettings from '../components/ButtonSettings'
 import Title from '../components/Title'
 import ButtonLink from '../components/buttons/ButtonLink'
 import ButtonReset from '../components/ButtonReset'
-import Select from '../components/Select'
+import SelectSituation from '../components/SelectSituation'
 import Bills from '../components/Bills'
 import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 
@@ -35,7 +35,7 @@ function Home() {
                     placeholder="Buscar"
                     onChange={ev => setSearch(ev.target.value)}
                 />
-                <Select setSituation={setSituation}/>
+                <SelectSituation setSituation={setSituation}/>
             </Filters>
             <Bills search={search} bills={bills} mutate={mutate} situation={situation}/>
         </Container>
