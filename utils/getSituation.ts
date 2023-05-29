@@ -1,5 +1,5 @@
-import { IBill } from '../../../../types'
-import { ISituation } from './type'
+import { IBill } from '../types'
+import ISituation from '../types/situation'
 
 function getSituation(bill: IBill): ISituation {
     if (bill.paid) {

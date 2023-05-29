@@ -1,5 +1,6 @@
 import { IBill } from '../../types'
 import { KeyedMutator } from 'swr'
+import ISituation from '../../types/situation'
 import { FC, useState } from 'react'
 import { Container, Loading } from './style'
 import includesInBill from './includesInBill'
@@ -10,9 +11,10 @@ interface IProps {
     search: string
     bills: IBill[] | undefined
     mutate: KeyedMutator<IBill[]>
+    situation: ISituation | undefined
 }
 
-const Bills: FC<IProps> = ({ bills, search, mutate }) => {
+const Bills: FC<IProps> = ({ bills, search, situation, mutate }) => {
     const [modalDelete, setModalDelete] = useState(false)
     const [billDelete, setBillDelete] = useState<string>()
 
@@ -26,7 +28,7 @@ const Bills: FC<IProps> = ({ bills, search, mutate }) => {
         return (
             <Container>
                 {bills.map((bill, index) => {
-                    if (includesInBill(bill, search)) {
+                    if (includesInBill(bill, search, situation)) {
                         return (
                             <Bill onDelete={onDelete} mutate={mutate} bill={bill} key={index}/>
                         )

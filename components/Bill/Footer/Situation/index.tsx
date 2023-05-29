@@ -1,6 +1,6 @@
 import { IBill } from '../../../../types'
 import { FC } from 'react'
-import getSituation from './getSituation'
+import getSituation from '../../../../utils/getSituation'
 import { Icon } from './style'
 
 interface IProps {

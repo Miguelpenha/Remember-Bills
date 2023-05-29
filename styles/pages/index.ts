@@ -16,15 +16,24 @@ export const Options = styled.div`
 `
 
 export const Filters = styled.div`
+    width: 45em;
     padding: 2em;
     display: flex;
     padding-top: 3em;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 900px) {
+        gap: 2em;
+        width: 100%;
+        flex-direction: column;
+    }
 `
 
 export const InputSearch = styled.input`
-    width: 35em;
+    width: 20em;
     border: none;
     padding: 1em;
     font-size: 1em;

@@ -10,6 +10,7 @@ export const Container = styled.div`
     align-self: center;
     margin-bottom: 5em;
     flex-direction: row;
+    justify-content: center;
 
     @media screen and (max-width: 900px) {
         justify-content: center;

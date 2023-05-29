@@ -1,4 +1,4 @@
-import { ISituation } from './type'
+import ISituation from './type'
 
 function getColorSituation(situation: ISituation) {
     switch (situation) {
