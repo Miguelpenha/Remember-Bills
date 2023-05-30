@@ -16,7 +16,7 @@ export const Options = styled.div`
 `
 
 export const Filters = styled.div`
-    width: 45em;
+    width: 50em;
     padding: 2em;
     display: flex;
     padding-top: 3em;
