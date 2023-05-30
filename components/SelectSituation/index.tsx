@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, FC } from 'react'
 import ISituation from '../../types/situation'
-import SelectRaw from 'react-select'
 import useStyles from './useStyles'
+import SelectRaw from 'react-select'
 import Control from './Control'
 
 interface IProps {
@@ -19,7 +19,14 @@ const SelectSituation: FC<IProps> = ({ setSituation }) => {
     const styles = useStyles()
     
     return (
-        <SelectRaw defaultValue={options[0]} onChange={(newValue) => setSituation((newValue as any).value)} components={{ Control }} options={options} styles={styles}/>
+        <SelectRaw
+            styles={styles}
+            options={options}
+            instanceId="situation"
+            components={{ Control }}
+            defaultValue={options[0]}
+            onChange={newValue => setSituation((newValue as any).value)}
+        />
     )
 }
 
