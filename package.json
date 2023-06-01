@@ -16,7 +16,7 @@
     "dinero.js": "^1.9.1",
     "exceljs": "^4.3.0",
     "jose": "^4.14.3",
-    "mongoose": "^7.2.1",
+    "mongoose": "^7.2.2",
     "next": "^13.4.4",
     "nookies": "^2.5.2",
     "react": "^18.2.0",
