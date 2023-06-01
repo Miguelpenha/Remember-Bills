@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { Container, Options, Filters, InputSearch } from '../styles/pages'
 import ButtonSettings from '../components/ButtonSettings'
 import Title from '../components/Title'
+import ButtonInsights from '../components/ButtonInsights'
 import ButtonRegister from '../components/ButtonRegister'
 import ButtonReset from '../components/ButtonReset'
 import SelectSituation from '../components/SelectSituation'
@@ -24,6 +25,7 @@ function Home() {
             <ButtonSettings/>
             <Title>Home</Title>
             <Options>
+                <ButtonInsights/>
                 <ButtonRegister/>
                 <ButtonReset mutate={mutate}/>
             </Options>
