@@ -1,28 +1,26 @@
-import { IBill } from '../../../../types'
+import ISituation from '../../../../types/situation'
 import { FC } from 'react'
-import getSituation from '../../../getSituation'
 import useGetColorSituation from '../../../useGetColorSituation'
-import { Icon } from './style'
+import { Container } from './style'
 
 interface IProps {
-    bill: IBill
+    situation: ISituation
 }
 
-const Situation: FC<IProps> = ({ bill }) => {
-    const situation = getSituation(bill)
+const Icon: FC<IProps> = ({ situation }) => {
     const color = useGetColorSituation(situation)
 
     switch (situation) {
         case 'paid':
             return (
-                <Icon fill={color} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <Container fill={color} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none"/>
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </Icon>
+                </Container>
             )
         case 'waiting':
             return (
-                <Icon fill={color} xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24">
+                <Container fill={color} xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24">
                     <g>
                         <rect fill="none" height="24" width="24"/>
                     </g>
@@ -33,16 +31,16 @@ const Situation: FC<IProps> = ({ bill }) => {
                             </g>
                         </g>
                     </g>
-                </Icon>
+                </Container>
             )
         case 'unpaid':
             return (
-                <Icon fill={color} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <Container fill={color} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none"/>
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-                </Icon>
+                </Container>
             )
     }
 }
 
-export default Situation
+export default Icon

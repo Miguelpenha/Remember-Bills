@@ -1,6 +1,6 @@
 import { IBill } from '../../types'
 import ISituation from '../../types/situation'
-import getSituation from '../../utils/getSituation'
+import getSituation from '../getSituation'
 
 function includesInBill(bill: IBill, search: string, situation: ISituation | undefined) {
     const includesName = bill.name.toUpperCase().includes(search.toUpperCase())

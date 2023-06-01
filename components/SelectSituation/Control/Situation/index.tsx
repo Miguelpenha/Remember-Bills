@@ -1,7 +1,7 @@
 import ISituation from './../../../../types/situation'
 import { FC } from 'react'
 import { IconRaw } from './style'
-import getColorSituation from '../getColorSituation'
+import getColorSituation from '../../../useGetColorSituation'
 
 interface IProps {
     situation: ISituation | undefined

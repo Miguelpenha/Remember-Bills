@@ -1,4 +1,4 @@
-import ISituation from '../../../types/situation'
+import ISituation from '../types/situation'
 import { useTheme } from 'styled-components'
 
 function useGetColorSituation(situation: ISituation | undefined) {

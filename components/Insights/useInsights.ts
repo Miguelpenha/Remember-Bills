@@ -1,4 +1,4 @@
-import { IBill } from '../types'
+import { IBill } from '../../types'
 import { useState, useEffect } from 'react'
 import dinero from 'dinero.js'
 
