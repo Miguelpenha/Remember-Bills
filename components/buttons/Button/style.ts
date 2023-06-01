@@ -57,7 +57,7 @@ export const styleText = css`
     color: ${props => props.theme.primary};
 
     @media screen and (max-width: 900px) {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 `
 

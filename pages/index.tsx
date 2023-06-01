@@ -3,9 +3,9 @@ import ISituation from '../types/situation'
 import useBills from '../components/useBills'
 import Head from 'next/head'
 import { Container, Options, Filters, InputSearch } from '../styles/pages'
+import ButtonRegister from '../components/ButtonRegister'
 import ButtonSettings from '../components/ButtonSettings'
 import Title from '../components/Title'
-import ButtonLink from '../components/buttons/ButtonLink'
 import ButtonReset from '../components/ButtonReset'
 import SelectSituation from '../components/SelectSituation'
 import Bills from '../components/Bills'
@@ -24,7 +24,7 @@ function Home() {
             <ButtonSettings/>
             <Title>Home</Title>
             <Options>
-                <ButtonLink href="/register">Cadastrar conta</ButtonLink>
+                <ButtonRegister/>
                 <ButtonReset mutate={mutate}/>
             </Options>
             <Filters>
