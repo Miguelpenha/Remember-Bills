@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Container } from '../styles/pages/settings'
+import { Container, Buttons } from '../styles/pages/settings'
 import Title from '../components/Title'
 import ButtonExport from '../components/ButtonExport'
 import ButtonLogout from '../components/ButtonLogout'
@@ -12,8 +12,10 @@ function Settings() {
         </Head>
         <Container>
             <Title>Configurações</Title>
-            <ButtonExport/>
-            <ButtonLogout/>
+            <Buttons>
+                <ButtonExport/>
+                <ButtonLogout/>
+            </Buttons>
         </Container>
     </>
 }
