@@ -1,10 +1,12 @@
 {
+    "theme_color": "#851ed0",
+    "background_color": "#0C1015",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
     "name": "Remember Bills",
     "short_name": "Remember Bills",
-    "start_url": "/",
-    "display": "standalone",
-    "theme_color":"#0C1015",
-    "background_color":"#0C1015",
+    "description": "Lembrar das contas",
     "icons": [
         {
             "src":"/img/favicon.png",
