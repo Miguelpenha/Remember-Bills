@@ -1,7 +1,7 @@
 {
     "theme_color": "#851ed0",
     "background_color": "#0C1015",
-    "display": "fullscreen",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "Remember Bills",
