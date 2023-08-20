@@ -39,6 +39,7 @@ export default class MyDocument extends Document {
                     <meta name="description" content="Remember Bills"/>
                     <meta name="twitter:card" content="summary_large_image"/>
                     <meta property="og:description" content="Remember Bills"/>
+                    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
                     <meta property="og:url" content="https://remember-bills.vercel.app/"/>
                     <meta property="og:image" content="https://remember-bills.vercel.app/img/thumbnail.png"/>
                 </Head>
