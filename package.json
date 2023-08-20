@@ -1,6 +1,6 @@
 {
-  "name": "test-contract",
-  "description": "Test Contract",
+  "name": "remember-bills",
+  "description": "Remember Bills",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

@@ -33,7 +33,14 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900" rel="stylesheet"/>
-                    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+                    <meta name="twitter:site" content="@MglPenha"/>
+                    <meta name="twitter:creator" content="@MglPenha"/>
+                    <meta property="og:title" content="Remember Bills"/>
+                    <meta name="description" content="Remember Bills"/>
+                    <meta name="twitter:card" content="summary_large_image"/>
+                    <meta property="og:description" content="Remember Bills"/>
+                    <meta property="og:url" content="https://remember-bills.vercel.app/"/>
+                    <meta property="og:image" content="https://remember-bills.vercel.app/img/thumbnail.png"/>
                 </Head>
                 <body>
                     <Main/>
