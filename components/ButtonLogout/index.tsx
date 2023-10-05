@@ -1,5 +1,5 @@
 import useHandleLogout from './useHandleLogout'
-import Button from '../buttons/Button'
+import { Button } from './style'
 
 function ButtonLogout() {
     const handleLogout = useHandleLogout()

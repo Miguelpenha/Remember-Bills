@@ -2,7 +2,7 @@ import { KeyedMutator } from 'swr'
 import { IBill } from '../../types'
 import { FC } from 'react'
 import handleReset from './handleReset'
-import Button from '../buttons/Button'
+import { Button } from './style'
 import Icon from './Icon'
 
 interface IProps {
