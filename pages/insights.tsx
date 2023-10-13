@@ -8,17 +8,20 @@ import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
 
 function Insights() {
     const { data: bills } = api.get<IBill[]>('/bills')
-    
 
-    return <>
-        <Head>
-            <title>Insights</title>
-        </Head>
-        <Container>
-            <Title>Insights</Title>
-            <InsightsList bills={bills}/>
-        </Container>
-    </>
+    if (bills) {
+        return <>
+            <Head>
+                <title>Insights</title>
+            </Head>
+            <Container>
+                <Title>Insights</Title>
+                <InsightsList bills={bills}/>
+            </Container>
+        </>
+    } else {
+        return null
+    }
 }
 
 export default Insights
