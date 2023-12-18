@@ -1,9 +1,9 @@
 import { IBill } from '../../types'
 import { KeyedMutator } from 'swr'
 import { FC } from 'react'
+import useHandleClick from './useHandleClick'
 import getDate from './getDate'
 import { Container, Header, PayDay, Title } from './style'
-import handlePayment from './handlePayment'
 import Options from './Options'
 import Footer from './Footer'
 
@@ -14,13 +14,8 @@ interface IProps {
 }
 
 const Bill: FC<IProps> = ({ bill, mutate, onDelete }) => {
+    const handleClick = useHandleClick(bill, mutate)
     const date = getDate(bill)
-
-    async function handleClick() {
-        await handlePayment(bill._id, !bill.paid)
-            
-        await mutate()
-    }
     
     return (
         <Container paid={bill.paid} onClick={handleClick}>
