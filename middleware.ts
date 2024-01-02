@@ -6,7 +6,7 @@ export async function middleware(req: NextRequest) {
   if (req.nextUrl.pathname === '/api/auth/login' || req.nextUrl.pathname === '/api/unauthorized') {
     return NextResponse.next()
   } else {
-    const token = req.cookies.get('auth')?.value
+    const token = req.cookies.get(process.env.NEXT_PUBLIC_LOGIN_COOKIE_NAME)?.value
 
     if (token) {
       try {
