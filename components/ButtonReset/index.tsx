@@ -17,7 +17,7 @@ const ButtonReset: FC<IProps> = ({ mutate }) => {
     }
 
     return (
-        <Button loading title="Resetar" onClick={handleClick}>
+        <Button loading loadingColor="red" title="Resetar" onClick={handleClick}>
             <Icon/>
         </Button>
     )
