@@ -1,4 +1,4 @@
-import ButtonLink from './buttons/ButtonLink'
+import ButtonLink from './ButtonLink'
 
 function ButtonInsights() {
     return (

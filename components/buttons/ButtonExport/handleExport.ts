@@ -1,4 +1,4 @@
-import base from '../../services/api/base'
+import base from '../../../services/api/base'
 
 async function handleExport() {
     const { data } = await base.get('/bills/export', {
