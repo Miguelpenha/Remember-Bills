@@ -9,9 +9,14 @@
     "description": "Remember Bills",
     "icons": [
         {
-            "src": "/icon.png",
+            "sizes": "57x57",
+            "type": "image/png",
+            "src": "/img/apple-touch-icon.png"
+        },
+        {
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "src": "/img/favicon-mobile.png"
         }
     ]
 }
