@@ -1,0 +1,17 @@
+{
+    "scope": "/",
+    "start_url": "/",
+    "display": "fullscreen",
+    "name": "Remember Bills",
+    "theme_color": "#851ed0",
+    "background_color": "#0C1015",
+    "short_name": "Remember Bills",
+    "description": "Remember Bills",
+    "icons": [
+        {
+            "src": "/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
