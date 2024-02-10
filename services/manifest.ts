@@ -21,6 +21,20 @@ const manifest: IManifest = {
             type: 'image/png',
             src: '/img/favicon-mobile.png'
         }
+    ],
+    screenshots: [
+        {
+            type: 'image/png',
+            sizes: '1200x628',
+            form_factor: 'wide',
+            src: '/img/screenshot-1.png'
+        },
+        {
+            type: 'image/jpg',
+            sizes: '628x1200',
+            form_factor: 'narrow',
+            src: '/img/screenshot-2.png'
+        }
     ]
 }
 
