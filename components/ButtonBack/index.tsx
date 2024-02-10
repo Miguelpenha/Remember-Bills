@@ -7,7 +7,7 @@ interface IProps {
 
 const ButtonBack: FC<IProps> = ({ href='/' }) => {
     return (
-        <Container href={href}>
+        <Container aria-label="Ir para página de configurações" href={href}>
             <Icon xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                 <rect fill="none" height="24" width="24"/>
                 <g>
