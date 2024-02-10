@@ -3,6 +3,7 @@ import api from '../../services/api'
 import { IBill } from '../../types'
 import Head from 'next/head'
 import { Container, Form, Field, Label, Required, ButtonSubmit } from '../../styles/pages/edit'
+import ButtonBack from '../../components/ButtonBack'
 import Title from '../../components/Title'
 import Input from '../../components/Input'
 import InputMask from '../../components/InputMask'
@@ -52,6 +53,7 @@ function Edit() {
                 <title>{`Editando ${data?.name || ''}`}</title>
             </Head>
             <Container>
+                <ButtonBack/>
                 <Title>Editar {data?.name}</Title>
                 <Form onSubmit={handleSubmit}>
                     <Field>

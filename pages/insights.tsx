@@ -2,6 +2,7 @@ import api from '../services/api'
 import { IBill } from '../types'
 import Head from 'next/head'
 import { Container } from '../styles/pages/insights'
+import ButtonBack from '../components/ButtonBack'
 import Title from '../components/Title'
 import InsightsList from '../components/Insights'
 import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
@@ -15,6 +16,7 @@ function Insights() {
                 <title>Insights</title>
             </Head>
             <Container>
+                <ButtonBack/>
                 <Title>Insights</Title>
                 <InsightsList bills={bills}/>
             </Container>

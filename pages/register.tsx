@@ -6,6 +6,7 @@ import api from '../services/api/base'
 import { toast } from 'react-toastify'
 import Head from 'next/head'
 import { Container, Form, Field, Label, Required, ButtonSubmit } from '../styles/pages/register'
+import ButtonBack from '../components/ButtonBack'
 import Title from '../components/Title'
 import Input from '../components/Input'
 import CurrencyInput from '../components/CurrencyInput'
@@ -38,6 +39,7 @@ function Create() {
             <title>Cadastrar conta</title>
         </Head>
         <Container>
+            <ButtonBack/>
             <Title>Cadastrar conta</Title>
             <Form onSubmit={handleSubmit}>
                 <Field>
