@@ -37,6 +37,6 @@ interface IIconOption {
 }
 
 export const IconOption = styled.svg<IIconOption>`
-    width: 1.8em;
+    width: 2.2em;
     fill: ${props => props.delete ? 'red' : props.theme.primary};
 `

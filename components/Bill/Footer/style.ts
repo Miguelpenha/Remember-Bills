@@ -12,21 +12,21 @@ export const ContainerPrice = styled.div`
 `
 
 export const Price = styled.span`
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
     color: ${props => props.theme.primary};
 
     @media screen and (max-width: 900px) {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 `
 
 export const Owner = styled.span`
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-left: auto;
     color: ${props => props.theme.colorSecondary};
 
     @media screen and (max-width: 900px) {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 `
