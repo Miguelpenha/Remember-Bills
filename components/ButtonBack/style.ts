@@ -14,6 +14,11 @@ export const Container = styled(Link)`
     :hover {
         background-color: ${props => props.theme.secondary};
     }
+
+    @media screen and (max-width: 900px) {
+        margin: 5%;
+        width: 2.5em;
+    }
 `
 
 export const Icon = styled.svg`
