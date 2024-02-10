@@ -30,7 +30,7 @@ const manifest: IManifest = {
             src: '/img/screenshot-1.png'
         },
         {
-            type: 'image/jpg',
+            type: 'image/png',
             sizes: '628x1200',
             form_factor: 'narrow',
             src: '/img/screenshot-2.png'
