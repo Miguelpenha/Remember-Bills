@@ -21,8 +21,6 @@ async function login(req: NextApiRequest, res: NextApiResponse<IData>) {
         const { jwt } = req.body as IBody
         const user = decodeJwt(jwt) as unknown as IUser
 
-        /*
-
         if (process.env.AUTHORIZED_EMAILS.split(',').includes(user.email)) {
             const token = await new SignJWT({})
             .setSubject('true')
@@ -34,10 +32,6 @@ async function login(req: NextApiRequest, res: NextApiResponse<IData>) {
         } else {
             res.json({ valid: false })
         }
-
-        */
-
-        res.status(400).send({ message: user ? 'User no exists' : JSON.stringify(user) } as any)
     } else {
         res.status(404)
     }
