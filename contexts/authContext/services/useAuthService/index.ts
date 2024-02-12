@@ -1,10 +1,13 @@
 import { Dispatch, SetStateAction } from 'react'
-import useLogout from './useLogout'
-import useLogin from './useLogin'
+import logoutRaw from './logout'
+import loginRaw from './login'
 
 function useAuthService(setIsLogged: Dispatch<SetStateAction<boolean>>) {
-    const logout = useLogout(setIsLogged)
-    const login = useLogin(setIsLogged)
+    const logout = () => logoutRaw(setIsLogged)
+
+    async function login(jwt: string) {
+        return await loginRaw(jwt, setIsLogged)
+    }
 
     return {
         login,
