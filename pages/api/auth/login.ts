@@ -21,7 +21,7 @@ async function login(req: NextApiRequest, res: NextApiResponse<IData>) {
         const { jwt } = req.body as IBody
         const user = decodeJwt(jwt) as unknown as IUser
 
-        console.log(user)
+        new Error(user ? 'User no exists' : JSON.stringify(user))
 
         if (process.env.AUTHORIZED_EMAILS.split(',').includes(user.email)) {
             const token = await new SignJWT({})
