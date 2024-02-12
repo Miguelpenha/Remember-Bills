@@ -16,6 +16,8 @@ async function login(jwt: string, setValue: Dispatch<SetStateAction<boolean>>) {
         const { valid, token } = (await api.post<IResponse>('/auth/login', {
             jwt
         } as IRequest)).data
+
+        console.log(valid, token)
     
         if (valid) {
             setValue(true)
