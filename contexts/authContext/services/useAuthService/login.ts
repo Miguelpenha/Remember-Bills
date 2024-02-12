@@ -12,6 +12,8 @@ interface IRequest {
 }
 
 async function login(jwt: string, setValue: Dispatch<SetStateAction<boolean>>) {
+    console.log('asd')
+    
     try {
         const { valid, token } = (await api.post<IResponse>('/auth/login', {
             jwt
