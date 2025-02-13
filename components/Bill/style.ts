@@ -46,6 +46,7 @@ export const PayDay = styled.span`
 export const Title = styled.span`
     font-size: 2em;
     margin-top: 0.5em;
+    align-self: flex-start;
 
     @media screen and (max-width: 900px) {
         font-size: 1.5em;
