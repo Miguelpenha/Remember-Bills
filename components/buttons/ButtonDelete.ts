@@ -5,7 +5,7 @@ const ButtonDelete = styled(Button)`
     && {
         box-shadow: red 0px 2px 8px 1px;
 
-        :hover {
+        &:hover {
             box-shadow: red 0px 2px 8px 4px;
         }
 

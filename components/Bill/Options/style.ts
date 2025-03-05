@@ -15,7 +15,7 @@ const styleOption = css`
     transition-duration: 0.1s;
     transition-timing-function: linear;
 
-    :hover {
+    &:hover {
         background-color: ${props => props.theme.secondary};
     }
 `

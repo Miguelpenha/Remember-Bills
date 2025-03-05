@@ -23,7 +23,7 @@ export const Container = styled.button<IContainer>`
     ${props => !props.paid && css`
         cursor: pointer;
         
-        :hover {
+        &:hover {
             transform: scale(1);
             background-color: ${props => props.theme.backgroundColor};
             box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;

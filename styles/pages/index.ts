@@ -44,17 +44,17 @@ export const InputSearch = styled.input`
     background-color: ${props => props.theme.secondary};
     box-shadow: ${props => props.theme.primary} 0px 1px 8px 1px;
 
-    ::placeholder {
+    &::placeholder {
         color: ${props => props.theme.colorSecondary};
     }
 
-    :focus {
+    &:focus {
         outline: none;
         border-radius: 8px;
         box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
     }
 
-    ::-webkit-search-cancel-button {
+    &::-webkit-search-cancel-button {
         opacity: 1;
         width: 25px;
         right: 10px;

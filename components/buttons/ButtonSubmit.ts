@@ -8,7 +8,7 @@ const ButtonSubmit = styled(Button)`
         background-color: ${props => props.disabled ? props.theme.secondary : props.theme.backgroundColor};
 
         ${props => !props.disabled && css`
-            :hover {
+            &:hover {
                 background-color: ${props => props.theme.secondary};
             }
         `}

@@ -5,7 +5,7 @@ export const Button = styled(ButtonRaw)`
     margin-top: 5em;
     box-shadow: #00ac47 0px 2px 8px 1px;
 
-    :hover {
+    &:hover {
         box-shadow: #00ac47 0px 2px 8px 4px;
     }
 

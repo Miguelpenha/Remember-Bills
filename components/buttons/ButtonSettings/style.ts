@@ -11,7 +11,7 @@ export const Container = styled(Link)`
     transition-duration: 0.2s;
     transition-timing-function: linear;
 
-    :hover {
+    &:hover {
         background-color: ${props => props.theme.secondary};
         box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
     }

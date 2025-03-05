@@ -27,7 +27,7 @@ export const styleContainer = css<IStyleContainer>`
     `}
 
     ${props => !props.disabled && css`
-        :hover {
+        &:hover {
             transform: scale(1);
             background-color: ${props => props.theme.backgroundColor};
             box-shadow: ${props => props.theme.primary} 0px 2px 8px 4px;
