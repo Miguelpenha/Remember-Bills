@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-interface IStyleContainer {
+export interface IStyleContainer {
     loading?: string
     disabled?: boolean
 }
@@ -46,7 +46,7 @@ export const styleContainer = css<IStyleContainer>`
     }
 `
 
-export const Container = styled.button`
+export const Container = styled.button<IStyleContainer>`
     ${styleContainer}
 `
 

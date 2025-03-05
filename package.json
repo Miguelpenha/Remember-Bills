@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "Miguel Penha <miguel.penha1@gmail.com> (https://portfolio-miguelpenha.vercel.app/)",
+  "author": "Miguel Penha <miguel.penha1@gmail.com> (https://miguelpenha.vercel.app)",
   "license": "MIT",
   "dependencies": {
     "@mona-health/react-input-mask": "^3.0.3",

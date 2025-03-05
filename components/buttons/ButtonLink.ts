@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { styleContainer, styleText } from './Button/style'
+import { IStyleContainer, styleContainer, styleText } from './Button/style'
 
-const ButtonLink = styled(Link)`
+const ButtonLink = styled(Link)<IStyleContainer>`
     ${styleContainer}
 
     && {
