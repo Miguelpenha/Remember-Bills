@@ -11,6 +11,7 @@ import ButtonReset from '../components/buttons/ButtonReset'
 import SelectSituation from '../components/SelectSituation'
 import Bills from '../components/Bills'
 import getServerSidePropsAuth from '../utils/getServerSidePropsAuth'
+import Total from '@/components/Total'
 
 function Home() {
     const [search, setSearch] = useState('')
@@ -39,6 +40,7 @@ function Home() {
                 />
                 <SelectSituation setSituation={setSituation}/>
             </Filters>
+            <Total bills={bills}/>
             <Bills search={search} bills={bills} mutate={mutate} situation={situation}/>
         </Container>
     </>
