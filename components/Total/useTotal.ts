@@ -14,7 +14,7 @@ function useTotal(bills: IBill[] | undefined) {
 
             setPercentPaid(Math.round((totalPaid/total)*100))
             setTotalValuePaid(dinero({ amount: totalPaid, currency: 'BRL' }).toFormat())
-            setTotalValueNoPaid(dinero({ amount: total, currency: 'BRL' }).toFormat())
+            setTotalValueNoPaid(dinero({ amount: total-totalPaid, currency: 'BRL' }).toFormat())
         }
     }, [bills])
 
