@@ -29,7 +29,7 @@ const Bills: FC<IProps> = ({ bills, search, situation, mutate }) => {
             </Container>
         )
     } else {
-        return <Loading size={140} weight={15}/>
+        return <Loading $size={140} $weight={15}/>
     }
 }
 

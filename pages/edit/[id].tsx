@@ -109,7 +109,7 @@ function Edit() {
     } else {
         return (
             <Container loading={true}>
-                <Loading size={140} weight={15}/>
+                <Loading $size={140} $weight={15}/>
             </Container>
         )
     }

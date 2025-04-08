@@ -21,7 +21,7 @@ const Button: FC<IProps> = ({ disabled, onClick, loading=false, loadingColor, ti
     
     return (
         <Container onClick={handleClick} loading={String(loadingState)} disabled={Boolean(disabled) || loadingState} {...props}>
-            {(loading && loadingState) ? <Loading color={loadingColor}/> : children}
+            {(loading && loadingState) ? <Loading $color={loadingColor}/> : children}
             <Text>{title}</Text>
         </Container>
     )
